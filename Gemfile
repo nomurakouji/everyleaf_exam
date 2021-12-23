@@ -14,6 +14,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rexml'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -27,7 +30,7 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  # gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'pry-rails'
   gem 'pry-byebug'
