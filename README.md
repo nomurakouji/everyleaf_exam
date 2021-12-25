@@ -4,10 +4,7 @@
 |content|text|
 
 * Herokuのデプロイ手順
- 1. fff
- 2. sss
- 3. sss
- 4. sss
- 5. sss
- 6. sss
- 7. ddd
+ 1. git add .
+ 2. git commit -m "message"
+ 3. git push origin master
+ 4. git push heroku master
