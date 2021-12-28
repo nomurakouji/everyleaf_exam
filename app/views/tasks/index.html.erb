@@ -3,9 +3,8 @@
 
 <%= form_with url: tasks_path, method: :get, local: true do |form| %>
   <%= form.text_field :name %>
-  <%= form.submit '検索'%> 
+  <%= form.submit 'タイトル検索'  %>
 <% end %>
-<br>
 
 <table>
  <tr>
@@ -26,6 +25,7 @@
  </tr>
 <% end %>
 </table>
+
 
 <%= link_to '新しくタスクを書く', new_task_path %>
 <br>
