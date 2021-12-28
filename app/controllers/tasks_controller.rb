@@ -16,16 +16,15 @@ class TasksController < ApplicationController
   end
 
   def index
-    if params[:sort_expired]
-      @tasks = Task.all.order(deadline: "DESC")
-    else
-      @tasks = Task.all
-    end
     if params[:name].present?
       @tasks = Task.where('name LIKE ?', "%#{params[:name]}%")
     else
       @tasks = Task.all
     end
+    if params[:sort_expired].present?
+      @tasks = Task.all.order(deadline: "DESC")
+    end
+    
   end
 
   def show
