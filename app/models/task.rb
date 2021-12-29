@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
   validates :name, presence:true
   validates :content, presence:true
-  # default_scope -> { order(created_at: :desc) }
+  enum condition: { "未着手": "未着手", "着手中": "着手中", "完了": "完了" }
 end

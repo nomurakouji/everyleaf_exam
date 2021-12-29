@@ -21,6 +21,9 @@ class TasksController < ApplicationController
     else
       @tasks = Task.all
     end
+    if params[:condition].present?
+      @tasks = Task.where(condition: params[:condition])
+    end
     if params[:sort_expired].present?
       @tasks = Task.all.order(deadline: "DESC")
     end
