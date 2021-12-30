@@ -2,13 +2,11 @@
 <p><%= notice %></p>
 
 <%= form_with url: tasks_path, method: :get, local: true do |form| %>
+  <%= form.label :name, "タイトル:" %>
   <%= form.text_field :name %>
-  <%= form.submit 'タイトル検索'  %>
-<% end %>
-
-<%= form_with url: tasks_path, method: :get, local: true do |form| %>
-  <%= form.select :condition,  [["未着手","未着手"],["着手中","着手中"],["完了","完了"]]%>
-  <%= form.submit '状況検索'  %>
+  <%= form.label :condition, "状況:" %>
+  <%= form.select :condition, options_for_select([[''],['未着手'],['着手中'],['完了']]) %>
+  <%= form.submit value: "search", type:"submit" %>
 <% end %>
 
 
