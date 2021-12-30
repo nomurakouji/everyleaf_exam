@@ -9,25 +9,26 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to tasks_path, notice: "ブログ作成しました!"
+      redirect_to tasks_path, notice: "タスク作成しました!"
     else
       render :new
     end
   end
 
   def index
-    if params[:name].present?
-      @tasks = Task.where('name LIKE ?', "%#{params[:name]}%")
-    else
-      @tasks = Task.all
+    if params[:sort_expired]
+      @tasks = Task.all.order(deadline: :desc)
+    elsif params[:name].present?
+      if params[:condition].present?
+        @tasks = Task.all.task_name_search(params[:name]).condition_search(params[:condition])
+      else
+        @tasks = Task.all.task_name_search(params[:name])
+      end
+    elsif params[:condition].present?
+      @tasks = Task.all.condition_search(params[:condition])
+    else 
+      @tasks = Task.all.order(condition: :desc)
     end
-    if params[:condition].present?
-      @tasks = Task.where(condition: params[:condition])
-    end
-    if params[:sort_expired].present?
-      @tasks = Task.all.order(deadline: "DESC")
-    end
-    
   end
 
   def show
