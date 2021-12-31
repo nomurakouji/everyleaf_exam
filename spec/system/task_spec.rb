@@ -26,6 +26,13 @@ RSpec.describe 'タスク管理機能', type: :system do
         expect(page).to have_content '1'
       end
     end
+    context 'ステータス検索をした場合' do
+      it "ステータスに完全一致するタスクが絞り込まれる" do
+        select '未着手', from: 'condition'
+        click_on 'search'
+        expect(page).to have_content '未着手'
+      end
+    end
     # context 'タスクが終了期限の降順で並んでいる場合' do
     #   it '最新の終了期限のタスクが一番上に表示される' do
     #     click_link "終了期限でソートする"
