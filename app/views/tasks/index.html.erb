@@ -22,7 +22,7 @@
   <td><%= task.name %></td>
   <td><%= task.content %></td>
   <td class = "task_deadline"><%= task.deadline %></td>
-  <td><%= task.condition%></td>
+  <td class = "task_condition"><%= task.condition%> </td>
   <td><%= link_to "確認する", task_path(task.id) %></td>
   <td><%= link_to "編集する", edit_task_path(task.id)%></td>
   <td><%= link_to "削除する", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
