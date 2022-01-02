@@ -1,3 +1,6 @@
+<%= link_to "並び替え(終了期限)",tasks_path(sort_expired:"true") %>
+<%= link_to "並び替え(優先順位)",tasks_path(sort_priority:"true") %>
+
 <h1>タスク一覧</h1>
 <p><%= notice %></p>
 
@@ -8,8 +11,10 @@
   <%= form.select :condition, options_for_select([[''],['未着手'],['着手中'],['完了']]) %>
   <%= form.submit value: "search", type:"submit" %>
 <% end %>
-
-
+<br>
+<%# <a class="btn btn-primary" href=http://localhost:3000/tasks/new role="button">新規登録</a> %>
+<%= link_to "新規作成", new_task_path, class: 'btn btn-primary'%>
+<br>
 <table>
  <tr>
   <th>タイトル</th>
@@ -25,19 +30,20 @@
   <td class = "task_deadline"><%= task.deadline %></td>
   <td><%= task.priority %></td>
   <td class = "task_condition"><%= task.condition%> </td>
-  <td><%= link_to "確認する", task_path(task.id) %></td>
-  <td><%= link_to "編集する", edit_task_path(task.id)%></td>
-  <td><%= link_to "削除する", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  <%# <td><%= link_to "確認する", task_path(task.id) %></td>   
+  <td><%= link_to "確認", task_path(task.id), class: 'btn btn-primary'%></td>
+  <%# <td><%= link_to "編集する", edit_task_path(task.id) %></td>  
+  <td><%= link_to "編集", edit_task_path(task.id), class: 'btn btn-warning'%></td>
+  <%# <td><%= link_to "削除する", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td> 
+  <td><%= link_to "削除", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger'%></td>
  </tr>
 <% end %>
 </table>
   <%= paginate @tasks %>
 
-<%= link_to '新しくタスクを書く', new_task_path %>
-<br>
-<%= link_to "終了期限でソートする",tasks_path(sort_expired:"true") %>
-<br>
-<%= link_to "優先順位でソートする",tasks_path(sort_priority:"true") %>
+
+<%# <%= link_to '新しくタスクを書く', new_task_path %> 
+
 
 
 
