@@ -11,6 +11,6 @@ class Task < ApplicationRecord
     # def condition_search(query)
     #   where(condition: query)
     # end
-  enum priority: {高: '高', 中: '中', 低: '低'}
+  enum priority: {高: 1, 中: 2, 低: 3}
 end
 
