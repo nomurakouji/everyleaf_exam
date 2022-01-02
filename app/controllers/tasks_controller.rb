@@ -18,6 +18,8 @@ class TasksController < ApplicationController
   def index
     if params[:sort_expired]
       @tasks = Task.all.order(deadline: :desc)
+    elsif params[:sort_priority]
+      @tasks = Task.all.order(priority: :asc)
     elsif params[:name].present?
       if params[:condition].present?
         @tasks = Task.all.task_name_search(params[:name]).condition_search(params[:condition])
