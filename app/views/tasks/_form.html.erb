@@ -21,6 +21,10 @@
     <%= form.label :deadline %>
     <%= form.text_field :deadline %>
   </div>
+  <div class="task_priority">
+    <%= form.label :priority %>
+    <%= form.select :priority,options_for_select([[''],['高'],['中'],['低']]) %>
+  </div>
   <div class="task_condition">
     <%= form.label :condition%>
     <%= form.select :condition,options_for_select([[''],['未着手'],['着手中'],['完了']])%>

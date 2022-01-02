@@ -15,6 +15,7 @@
   <th>タイトル</th>
   <th>内容</th>
   <th>締切</th>
+  <th>優先順位</th>
   <th>状況</th>
  </tr>
 <% @tasks.each do |task| %>
@@ -22,6 +23,7 @@
   <td><%= task.name %></td>
   <td><%= task.content %></td>
   <td class = "task_deadline"><%= task.deadline %></td>
+  <td><%= task.priority %></td>
   <td class = "task_condition"><%= task.condition%> </td>
   <td><%= link_to "確認する", task_path(task.id) %></td>
   <td><%= link_to "編集する", edit_task_path(task.id)%></td>
