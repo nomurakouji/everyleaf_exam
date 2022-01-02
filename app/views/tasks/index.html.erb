@@ -18,7 +18,7 @@
   <th>優先順位</th>
   <th>状況</th>
  </tr>
-<% @tasks.each do |task| %>
+<% @task.each do |task| %>
  <tr>
   <td><%= task.name %></td>
   <td><%= task.content %></td>
@@ -31,10 +31,13 @@
  </tr>
 <% end %>
 </table>
-
+  <%= paginate @tasks %>
 
 <%= link_to '新しくタスクを書く', new_task_path %>
 <br>
 <%= link_to "終了期限でソートする",tasks_path(sort_expired:"true") %>
 <br>
 <%= link_to "優先順位でソートする",tasks_path(sort_priority:"true") %>
+
+
+
