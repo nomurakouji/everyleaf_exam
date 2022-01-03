@@ -1,1 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}
+.btn.btn-info {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+.task_deadline{
+  color:red
+}
+a{
+  margin-right: 1rem;
+}
+h1{
+  font-weight: bold;
+  margin: 1rem;
+}
