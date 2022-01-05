@@ -12,5 +12,6 @@ class Task < ApplicationRecord
     #   where(condition: query)
     # end
   enum priority: {高: 1, 中: 2, 低: 3}
+  belongs_to :user
 end
 
