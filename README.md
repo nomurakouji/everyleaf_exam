@@ -8,4 +8,3 @@
  2. git commit -m "message"
  3. git push origin master
  4. git push heroku master
- 

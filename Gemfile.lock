@@ -83,7 +83,7 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     debug_inspector (1.1.0)
-    diff-lcs (1.4.4)
+    diff-lcs (1.5.0)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -98,6 +98,18 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -160,9 +172,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
-    rails-i18n (6.0.0)
+    rails-i18n (7.0.1)
       i18n (>= 0.7, < 2)
-      railties (>= 6.0.0, < 7)
+      railties (>= 6.0.0, < 8)
     railties (6.0.3)
       actionpack (= 6.0.3)
       activesupport (= 6.0.3)
@@ -250,16 +262,17 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-  x86_64-darwin-21
+  x86_64-darwin-20
 
 DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)
   byebug
-  capybara (>= 2.15)
+  capybara (= 3.36.0)
   factory_bot_rails
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
@@ -269,7 +282,7 @@ DEPENDENCIES
   rails (= 6.0.3)
   rails-i18n
   rexml
-  rspec-rails (~> 5.0.0)
+  rspec-rails (= 5.0.2)
   sass-rails (>= 6)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -278,9 +291,6 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
-
-RUBY VERSION
-   ruby 3.0.1p64
 
 BUNDLED WITH
    2.3.0

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.1'
+# ruby '3.0.1'
 
 gem 'rails', '= 6.0.3'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -16,7 +16,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'rexml'
-  gem 'rspec-rails', '~> 5.0.0'
+  gem 'rspec-rails', '= 5.0.2'
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -30,7 +30,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '= 3.36.0'
   # gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'pry-byebug'
@@ -39,3 +39,4 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-i18n'
+gem 'kaminari'
