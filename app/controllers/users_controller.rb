@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
   def new
     @user = User.new
+    if logged_in?
+      redirect_to tasks_path  
+    end
   end
 
   def create
@@ -24,6 +27,15 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: "ユーザーを削除しました" }
+      format.json { head :no_content }
+    end
   end
 
   private
