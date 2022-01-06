@@ -12,8 +12,7 @@
         <td><%= user.id %></td>
         <td><%= user.namae %></td>
         <td><%= user.email %></td>
+        <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に良きですか?' } %></td>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to "ユーザーの作成", new_admin_user_path %>
