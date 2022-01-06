@@ -1,0 +1,10 @@
+<h1>管理者のページ</h1>
+
+<p>管理者:<%= @user.namae %></p>
+<p>メールアドレス:<%= @user.email %></p>
+
+<%= link_to "ユーザー管理画面", admin_users_path %>
+<br>
+<%= link_to "ユーザーの作成", new_admin_user_path %>
+<br>
+<%= link_to "タスク一覧", tasks_path %>

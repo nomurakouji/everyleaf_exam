@@ -17,14 +17,14 @@ class TasksController < ApplicationController
   end
 
   def index
+    # if current_user.admin?
+    #   @task = Task.all.order(condition: :desc).page(params[:page]).per(5)
+    # end
     @tasks = Task.page(params[:page]).per(5)
     if params[:sort_expired]
       @task = current_user.tasks.order(deadline: :desc).page(params[:page]).per(5)
-
     elsif params[:sort_priority]
       @task = current_user.tasks.order(priority: :asc).page(params[:page]).per(5)
-    
-
     elsif params[:name].present?
       if params[:condition].present?
         @task = current_user.tasks.task_name_search(params[:name]).condition_search(params[:condition]).page(params[:page]).per(5)
