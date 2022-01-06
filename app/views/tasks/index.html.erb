@@ -21,6 +21,7 @@
       <th style="width :5%">締切</th>
       <th style="width :5%">優先順位</th>
       <th style="width :5%">状況</th>
+      <th style="width :5%">作成者</th>
       <th style="width :5%"></th>
       <th style="width :5%"></th>
       <th style="width :5%"></th> 
@@ -33,6 +34,7 @@
     <td class = "task_deadline"><%= task.deadline %></td>
     <td><%= task.priority %></td>
     <td class = "task_condition"><%= task.condition%> </td>
+    <td><%= task.user.namae%></td>
     <div class>
     <td class = check_buttons><%= link_to "確認", task_path(task.id), class: 'btn btn-primary'%></td> 
     <td class = check_buttons><%= link_to "編集", edit_task_path(task.id), class: 'btn btn-warning'%></td>
