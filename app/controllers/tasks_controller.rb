@@ -17,9 +17,6 @@ class TasksController < ApplicationController
   end
 
   def index
-    # if current_user.admin?
-    #   @task = Task.all.order(condition: :desc).page(params[:page]).per(5)
-    # end
     @tasks = Task.page(params[:page]).per(5)
     if params[:sort_expired]
       @task = current_user.tasks.order(deadline: :desc).page(params[:page]).per(5)
@@ -35,6 +32,9 @@ class TasksController < ApplicationController
       @task = current_user.tasks.condition_search(params[:condition]).page(params[:page]).per(5)
     else 
       @task = current_user.tasks.order(condition: :desc).page(params[:page]).per(5)
+    end
+    if current_user.admin?
+      @task = Task.all.order(condition: :desc).page(params[:page]).per(5)
     end
   end
 
