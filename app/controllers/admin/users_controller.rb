@@ -5,7 +5,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.order("created_at DESC")
+    @users = User.all
   end
   
   def edit
@@ -15,12 +15,13 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: "ユーザーを削除しました" }
+      format.html { redirect_to admin_users_url, notice: "ユーザーを削除しました" }
       format.json { head :no_content }
     end
   end
   private
   def admin_user
+    @users = User.all
     redirect_to(root_path) unless current_user.admin?
   end
 end
