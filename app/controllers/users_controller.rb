@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       redirect_to user_path(@user.id)
-    else
+    else 
       render :new
     end
   end
@@ -20,6 +20,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.id == @current_user.id
       render "show"
+    elsif logged_in?
+      @user = User.find(params[:id])
     else
       redirect_to tasks_path
     end
