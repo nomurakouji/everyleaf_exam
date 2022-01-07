@@ -6,7 +6,6 @@ class Admin::UsersController < ApplicationController
 
   def index
     @users = User.all
-    @task = Task.all
   end
   
   def edit
