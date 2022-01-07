@@ -12,9 +12,15 @@
         <td><%= user.id %></td>
         <td><%= user.namae %></td>
         <td><%= user.email %></td>
-        <td><%= link_to "確認", user_path(user) %></td> 
-        <td><%= link_to "編集", edit_user_path(user) %></td>
+        <td><%= link_to "確認", admin_user_path(user) %></td> 
+        <td><%= link_to "編集", edit_admin_user_path(user) %></td>
         <td><%= link_to '削除', admin_user_path(user), method: :delete, data: { confirm: '本当に良きですか?' } %></td>
     <% end %>
   </tbody>
 </table>
+
+<%# <%= link_to "ユーザー管理画面", admin_users_path %> 
+<br>
+<%= link_to "ユーザーの作成", new_user_path %>
+<br>
+<%= link_to "タスク一覧", tasks_path %>

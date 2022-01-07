@@ -3048,3 +3048,844 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.4ms | Allocations: 16845)
 
 
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:39:17 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 12.0ms | ActiveRecord: 1.1ms | Allocations: 14232)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:39:19 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1405)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.0ms | Allocations: 7655)
+
+
+Started GET "/users/16" for ::1 at 2022-01-07 13:39:22 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.7ms | Allocations: 8709)
+
+
+Started GET "/users/15" for ::1 at 2022-01-07 13:39:25 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 1.1ms | Allocations: 7253)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:39:28 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 7162)
+
+
+Started GET "/users/5" for ::1 at 2022-01-07 13:39:29 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 7140)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:39:32 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 6584)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:39:51 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1518)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.7ms | Allocations: 9166)
+
+
+Started GET "/admin/users/5" for ::1 at 2022-01-07 13:39:51 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.8ms | Allocations: 7032)
+
+
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:39:53 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 6640)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:40:05 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1632)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 9235)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:40:59 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1631)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 9326)
+
+
+Started GET "/admin/users/5" for ::1 at 2022-01-07 13:41:00 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 7043)
+
+
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:41:03 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 6642)
+
+
+Started GET "/admin/users/15" for ::1 at 2022-01-07 13:41:05 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 6649)
+
+
+Started GET "/admin/users/16" for ::1 at 2022-01-07 13:41:07 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 6640)
+
+
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:41:09 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 6634)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:11 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.7ms | Allocations: 7188)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:13 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 7173)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:13 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.1ms | Allocations: 7189)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:18 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.8ms | Allocations: 7191)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:27 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.5ms | Allocations: 9275)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:28 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 7267)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:41:32 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 7197)
+
+
+Started GET "/" for ::1 at 2022-01-07 13:41:37 +0900
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 ORDER BY "tasks"."condition" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 4], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:49
+  Rendered tasks/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 15783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 28.0ms | ActiveRecord: 5.5ms | Allocations: 27279)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:41:47 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 7896)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:41:49 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 1.0ms | Allocations: 6629)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:41:52 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.9ms | Allocations: 6499)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:42:23 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 8341)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:42:24 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 8831)
+
+
+Started DELETE "/sessions/4" for ::1 at 2022-01-07 13:42:25 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L/zf+wjnCvFaZMSbZlmJEJf/Eqd7JcGKAUu+6eOzWF+8QVMqVx4Sg4XAW+j+YLdCyOqhTVQ6NJHj6YCN52Wu7Q==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1275)
+
+
+Started GET "/sessions/new" for ::1 at 2022-01-07 13:42:25 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 8158)
+
+
+Started POST "/sessions" for ::1 at 2022-01-07 13:42:30 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xDRsZxFvxVqJAQ7NsS0c3BUm6MZdTF/iO0SHMQgQDq1XieC2TpbdKFalkb4pFCKOSjNbLHJTqvnZ5rlVDMb4Hw==", "session"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/admin/users/5
+Completed 302 Found in 269ms (ActiveRecord: 0.3ms | Allocations: 1256)
+
+
+Started GET "/admin/users/5" for ::1 at 2022-01-07 13:42:31 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :admin_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 968)
+
+
+Started GET "/" for ::1 at 2022-01-07 13:42:31 +0900
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 ORDER BY "tasks"."condition" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:49
+  Rendered tasks/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 8647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 1.1ms | Allocations: 16000)
+
+
+Started GET "/users/5" for ::1 at 2022-01-07 13:42:34 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 0.8ms | Allocations: 6597)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:42:35 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :admin_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 976)
+
+
+Started GET "/" for ::1 at 2022-01-07 13:42:35 +0900
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 ORDER BY "tasks"."condition" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:49
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 7134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 1.2ms | Allocations: 13409)
+
+
+Started GET "/users/5" for ::1 at 2022-01-07 13:42:37 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 0.9ms | Allocations: 6533)
+
+
+Started GET "/users/5" for ::1 at 2022-01-07 13:42:38 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 1.2ms | Allocations: 6526)
+
+
+Started DELETE "/sessions/5" for ::1 at 2022-01-07 13:42:41 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rqee2GmZQZC5Dz9x+A1Al90JFd0JM6VA3enseOD5Vo89GhIJNmBZ4maroAJgNH7FghymNyYsUFs/S9Ic5C+gPQ==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 994)
+
+
+Started GET "/sessions/new" for ::1 at 2022-01-07 13:42:41 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 6559)
+
+
+Started POST "/sessions" for ::1 at 2022-01-07 13:42:45 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7Ctp2OxHpq44rIsp2YXPX8lZW4Jb7bt7h9tudJ5HsY9/luUJs76+3OcIFFpBvPENlkzoaHTyTmBleVAQmpFHPQ==", "session"=>{"email"=>"baby@metal.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "baby@metal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/admin/users/4
+Completed 302 Found in 264ms (ActiveRecord: 0.4ms | Allocations: 1016)
+
+
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:42:45 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 6911)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:42:54 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 6515)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:42:58 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.7ms | Allocations: 7191)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:43:03 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 7178)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:43:15 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.6ms | Allocations: 9227)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:43:19 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.7ms | Allocations: 9310)
+
+
+Started GET "/users/5/edit" for ::1 at 2022-01-07 13:43:21 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 8827)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:43:44 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.8ms | Allocations: 9351)
+
+
+Started GET "/admin/users/16/edit" for ::1 at 2022-01-07 13:43:45 +0900
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:12:in `edit'
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 948)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.6ms | Allocations: 7738)
+
+
+Started GET "/admin/users/15/edit" for ::1 at 2022-01-07 13:43:50 +0900
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:12:in `edit'
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 7214)
+
+
+Started GET "/admin/users/4/edit" for ::1 at 2022-01-07 13:43:52 +0900
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:12:in `edit'
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.6ms | Allocations: 7214)
+
+
+Started GET "/admin/users/5/edit" for ::1 at 2022-01-07 13:43:54 +0900
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:12:in `edit'
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 7206)
+
+
+Started DELETE "/admin/users/16" for ::1 at 2022-01-07 13:44:34 +0900
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5d38yT1hIo8SO8GcCWMR/cEWf1cxtOaPLTtvrpl+mCR2YHAYYpg6/c2fXu+RWi+vngPMvR6rE5TPmVHKnahulg==", "id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:25:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:26:in `destroy'
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/admin/users_controller.rb:26:in `destroy'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:26:in `destroy'
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms | Allocations: 3532)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:44:34 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 7078)
+
+
+Started GET "/users/new" for ::1 at 2022-01-07 13:44:37 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 8654)
+
+
+Started POST "/users" for ::1 at 2022-01-07 13:44:42 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"CEqnEsn4rT+UjpK3XxYuz3Zlny+b7AZnpTx0ho66uOj4PRFIyL9RSUqLPi7NXIxX9qkzI6ep1OVq05j+mPiIHg==", "user"=>{"namae"=>"123@123.com", "email"=>"123@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("namae", "email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["namae", "123@123.com"], ["email", "123@123.com"], ["created_at", "2022-01-07 13:44:42.671545"], ["updated_at", "2022-01-07 13:44:42.671545"], ["password_digest", "$2a$12$W47bSfBmDm5wn64V938lLeOCCyMk866DaLhs3QBm0PAr6YIwVno3y"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 269ms (ActiveRecord: 2.8ms | Allocations: 3815)
+
+
+Started GET "/users/19" for ::1 at 2022-01-07 13:44:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 6820)
+
+
+Started DELETE "/sessions/19" for ::1 at 2022-01-07 13:44:49 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vJ/ic16eZk2ftiyQChzjOL/aGM6lXKMqhMdqA1nc810vIm6iAWd+P0ASs+OSJd1q4M+rJIpDVjFmZVRnXQoF7w==", "id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 999)
+
+
+Started GET "/sessions/new" for ::1 at 2022-01-07 13:44:49 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 734)
+[Webpacker] Everything's up-to-date. Nothing to do
+Started DELETE "/sessions/19" for ::1 at 2022-01-07 13:44:49 +0900
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.3ms | Allocations: 8985)
+
+
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vJ/ic16eZk2ftiyQChzjOL/aGM6lXKMqhMdqA1nc810vIm6iAWd+P0ASs+OSJd1q4M+rJIpDVjFmZVRnXQoF7w==", "id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1517)
+
+
+Started GET "/sessions/new" for ::1 at 2022-01-07 13:44:49 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 6787)
+
+
+Started POST "/sessions" for ::1 at 2022-01-07 13:44:54 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"QX5216Hh8ZPW2LAEK+pTovvHwS/VHCz1KnZW9oYBCnzSw/oG/hjp4Ql8L3ez023wpNJyxfoD2e7I1GiSgtf8zg==", "session"=>{"email"=>"baby@metal.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "baby@metal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+Completed 200 OK in 270ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 7159)
+
+
+Started POST "/sessions" for ::1 at 2022-01-07 13:45:03 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"iBaxDxVloici65uaQa7FyV83NPKxl3bG4LVu47dcyisbqz3eSpy6Vf1PBOnZl/ubACKHGJ6Ig90CF1CHs4o8mQ==", "session"=>{"email"=>"baby@metal.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "baby@metal.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/admin/users/4
+Completed 302 Found in 264ms (ActiveRecord: 0.3ms | Allocations: 1027)
+
+
+Started GET "/admin/users/4" for ::1 at 2022-01-07 13:45:04 +0900
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:4:in `show'
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 6967)
+
+
+Started GET "/users/4" for ::1 at 2022-01-07 13:45:06 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.9ms | Allocations: 6521)
+
+
+Started GET "/admin/users" for ::1 at 2022-01-07 13:45:07 +0900
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3:in `current_user'
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:10
+  Rendered admin/users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 7172)
+
+
