@@ -2,22 +2,21 @@
 <p>メールアドレス:<%= @user.email %></p>
 
 <table>
-  <tr>
+    <tr>
       <th>タスク</th>
       <th>内容</th>
       <th>期限</th>
-  </tr>
-  <tbody>
-  <% @tasks.each do |task| %>
-    <tr>
-      <td><%= task.user.namae %></td>
-      <td><%= task.content %></td>
-      <td><%= task.deadline %></td>
     </tr>
-  <% end %>
+  <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.name %></td>
+          <td><%= task.content %></td>
+          <td><%= task.deadline %></td>
+        </tr>
+      <% end %>
   </tbody>
 </table>
-
 
 <%= link_to "ユーザー管理画面", admin_users_path %>
 
