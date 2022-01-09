@@ -23,10 +23,8 @@ class UsersController < ApplicationController
     @tasks = @user.tasks
     if @user.id == @current_user.id
       render "show"
-    elsif logged_in?
-      @user = User.find(params[:id])
     else
-      redirect_to tasks_path
+      redirect_to tasks_path, notice: "他のユーザー詳細は見れません"
     end
   end
   
