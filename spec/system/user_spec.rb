@@ -13,12 +13,25 @@ RSpec.describe 'ユーザ管理機能', type: :system do
         expect(page). to have_content 'tanaka@taro.com'
       end
     end
-  end
-  describe '新規登録機能' do
     context 'ユーザーがログインせずにタスク一覧画面に飛ぼうとした場合' do
       it 'ログイン画面に遷移される' do
         visit tasks_path
         expect(page). to have_content 'Sign up'
+      end
+    end
+  end
+  describe 'セッション機能' do
+    before do
+      FactoryBot.create(:user)
+      # FactoryBot.create(:second_user)
+      # FactoryBot.create(:third_user)
+    end
+    context 'ユーザーを新規登録した場合' do
+      it 'ログインができる' do
+        visit sessions_new_path
+        fill_in 'Email', with: '管理者です'
+        fill_in 'Password', with: 'admin@admin.com'
+        click_on 'Log in'
       end
     end
   end
