@@ -15,7 +15,6 @@
         <td><%= user.namae %></td>
         <td><%= user.email %></td>
         <td><%= user.tasks.count %></td>
-        <%# <td><%= user.admin? %></td> %>
         <% if user.admin? %>
           <td>管理者</td>
         <% else %>
