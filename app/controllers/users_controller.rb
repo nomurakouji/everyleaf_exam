@@ -45,6 +45,7 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+    
   end
 
   def destroy
@@ -58,6 +59,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:namae, :email, :password, :password_confirmation)
+    params.require(:user).permit(:namae, :email, :password, :password_confirmation, :admin)
   end
 end
