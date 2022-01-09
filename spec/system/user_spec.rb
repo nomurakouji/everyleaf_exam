@@ -24,7 +24,7 @@ RSpec.describe 'ユーザ管理機能', type: :system do
   end
   describe 'セッション機能' do
     before do
-      FactoryBot.create(:second_user)
+      FactoryBot.create(:user)
       visit new_user_path
       fill_in 'Namae', with:'user1'
       fill_in 'Email', with: 'user1@user.com'
@@ -46,7 +46,7 @@ RSpec.describe 'ユーザ管理機能', type: :system do
     end
     context '他人の詳細ページをクリック' do
       it 'タスク一覧画面に遷移する' do
-        visit  user_path(2)
+        visit  user_path(1)
         expect(page).to have_content 'タスク一覧'
       end
     end
@@ -54,6 +54,13 @@ RSpec.describe 'ユーザ管理機能', type: :system do
       it 'ログアウトする' do
         click_on 'Logout'
         expect(page).to have_content 'ログアウトしました'
+      end
+    end
+  end
+  describe '管理画面のテスト' do
+    context '管理ユーザ登録' do
+      it '管理画面にアクセスできる' do
+        
       end
     end
   end
