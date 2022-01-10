@@ -58,27 +58,19 @@ RSpec.describe 'ユーザ管理機能', type: :system do
   #   end
   # end
   describe '管理画面のテスト' do
-    # before do
-      # FactoryBot.create(:user)
-      # let!(:user){FactoryBot.create(:user)}
-      # user = User.new(user)
     before do
-      User.create!(namae: '管理者です', 
-        email: 'admin@admin.com',
-        password: 'admin@admin.com',
-        password_digest: 'admin@admin.com',
-        admin: true)
+      FactoryBot.create(:user)
     end
-    # end
-    context '管理ユーザのログイン後' do
+    context '管理ユーザ登録' do
       it '管理画面にアクセスできる' do
         visit new_session_path
         fill_in 'session[email]', with: 'admin@admin.com'
         fill_in 'session[password]', with: 'admin@admin.com'
         click_on 'Log in'
-        # click_on 'ユーザー管理画面'
-        # visit admin_users_path
-        # expect(current_path).to eq admin_users_path
+        sleep (3)
+        visit admin_users_path
+        sleep (3)
+        expect(current_path).to eq admin_users_path
       end
     end
 
@@ -95,23 +87,23 @@ RSpec.describe 'ユーザ管理機能', type: :system do
     #   end
     # end
 
-    # context '管理ユーザ登録' do
-    #   it 'ユーザーの新規登録ができる' do
-    #     visit new_session_path
-    #     fill_in 'session[email]', with: 'admin@admin.com'
-    #     fill_in 'session[password]', with: 'admin@admin.com'
-    #     click_on 'Log in'
-    #     click_on 'ユーザー管理画面'
-    #     click_on 'ユーザーの作成'
-    #     fill_in 'Namae', with:'111'
-    #     fill_in 'Email', with: '111@111.com'
-    #     fill_in 'Password', with: '111@111.com'
-    #     fill_in 'Password confirmation', with: '111@111.com'
-    #     click_on 'Create my account'
-    #     expect(page).to have_content '111のページ'
-    #     expect(page).to have_content '111@111.com'
-    #   end
-    # end
+    context '管理ユーザ登録' do
+      it 'ユーザーの新規登録ができる' do
+        visit new_session_path
+        fill_in 'session[email]', with: 'admin@admin.com'
+        fill_in 'session[password]', with: 'admin@admin.com'
+        click_on 'Log in'
+        click_on 'ユーザー管理画面'
+        click_on 'ユーザーの作成'
+        fill_in 'Namae', with:'111'
+        fill_in 'Email', with: '111@111.com'
+        fill_in 'Password', with: '111@111.com'
+        fill_in 'Password confirmation', with: '111@111.com'
+        click_on 'Create my account'
+        expect(page).to have_content '111のページ'
+        expect(page).to have_content '111@111.com'
+      end
+    end
     
     # context '管理ユーザ登録' do
     #   it 'ユーザーの詳細画面にアクセス' do
