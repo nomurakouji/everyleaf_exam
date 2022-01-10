@@ -44,12 +44,12 @@ RSpec.describe 'ユーザ管理機能', type: :system do
   #       expect(page). to have_content 'user1@user.com'
   #     end
   #   end
-  #   context '他人の詳細ページをクリック' do
-  #     it 'タスク一覧画面に遷移する' do
-  #       visit  user_path(1)
-  #       expect(page).to have_content 'タスク一覧'
-  #     end
-  #   end
+    # context '他人の詳細ページをクリック' do
+    #   it 'タスク一覧画面に遷移する' do
+    #     visit  user_path(1)
+    #     expect(page).to have_content 'タスク一覧'
+    #   end
+    # end
   #   context 'ログインする' do
   #     it 'ログアウトする' do
   #       click_on 'Logout'
@@ -58,18 +58,27 @@ RSpec.describe 'ユーザ管理機能', type: :system do
   #   end
   # end
   describe '管理画面のテスト' do
+    # before do
+      # FactoryBot.create(:user)
+      # let!(:user){FactoryBot.create(:user)}
+      # user = User.new(user)
     before do
-      FactoryBot.create(:user)
+      User.create!(namae: '管理者です', 
+        email: 'admin@admin.com',
+        password: 'admin@admin.com',
+        password_digest: 'admin@admin.com',
+        admin: true)
     end
-    1.管理ユーザは管理画面にアクセスできること
-    context '管理ユーザ登録' do
+    # end
+    context '管理ユーザのログイン後' do
       it '管理画面にアクセスできる' do
         visit new_session_path
         fill_in 'session[email]', with: 'admin@admin.com'
         fill_in 'session[password]', with: 'admin@admin.com'
         click_on 'Log in'
-        click_on 'ユーザー管理画面'
-        expect(current_path).to eq admin_users_path
+        # click_on 'ユーザー管理画面'
+        # visit admin_users_path
+        # expect(current_path).to eq admin_users_path
       end
     end
 
@@ -86,24 +95,23 @@ RSpec.describe 'ユーザ管理機能', type: :system do
     #   end
     # end
 
-    #3.管理ユーザはユーザの新規登録ができること
-    context '管理ユーザ登録' do
-      it 'ユーザーの新規登録ができる' do
-        visit new_session_path
-        fill_in 'session[email]', with: 'admin@admin.com'
-        fill_in 'session[password]', with: 'admin@admin.com'
-        click_on 'Log in'
-        click_on 'ユーザー管理画面'
-        click_on 'ユーザーの作成'
-        fill_in 'Namae', with:'111'
-        fill_in 'Email', with: '111@111.com'
-        fill_in 'Password', with: '111@111.com'
-        fill_in 'Password confirmation', with: '111@111.com'
-        click_on 'Create my account'
-        expect(page).to have_content '111のページ'
-        expect(page).to have_content '111@111.com'
-      end
-    end
+    # context '管理ユーザ登録' do
+    #   it 'ユーザーの新規登録ができる' do
+    #     visit new_session_path
+    #     fill_in 'session[email]', with: 'admin@admin.com'
+    #     fill_in 'session[password]', with: 'admin@admin.com'
+    #     click_on 'Log in'
+    #     click_on 'ユーザー管理画面'
+    #     click_on 'ユーザーの作成'
+    #     fill_in 'Namae', with:'111'
+    #     fill_in 'Email', with: '111@111.com'
+    #     fill_in 'Password', with: '111@111.com'
+    #     fill_in 'Password confirmation', with: '111@111.com'
+    #     click_on 'Create my account'
+    #     expect(page).to have_content '111のページ'
+    #     expect(page).to have_content '111@111.com'
+    #   end
+    # end
     
     # context '管理ユーザ登録' do
     #   it 'ユーザーの詳細画面にアクセス' do
@@ -112,10 +120,34 @@ RSpec.describe 'ユーザ管理機能', type: :system do
     #     fill_in 'session[password]', with: 'admin@admin.com'
     #     click_on 'Log in'
     #     click_on 'ユーザー管理画面'
-    #     # ?????
-    #     # click_on '確認'
+    #     visit admin_user_path(2)
     #     expect(page).to have_content '111のページ'
     #     expect(page).to have_content '111@111.com'
+    #   end
+    # end
+    # context '管理ユーザ登録' do
+    #   it 'ユーザーの編集画面からユーザーを編集できる' do
+    #     visit new_session_path
+    #     fill_in 'session[email]', with: 'admin@admin.com'
+    #     fill_in 'session[password]', with: 'admin@admin.com'
+    #     click_on 'Log in'
+    #     click_on 'ユーザー管理画面'
+    #     visit edit_admin_user_path(2)
+    #     fill_in 'user[namae]', with: 'aaaaa'
+    #     click_on '編集完了'
+    #     expect(page).to have_content "aaaaa"
+    #   end
+    # end
+    # context '管理ユーザの登録' do
+    #   it 'ユーザの削除ができる' do
+        # @second_user = FactoryBot.create(:second_user)
+        # visit new_session_path
+    #     fill_in 'session[email]', with: 'admin@admin.com'
+    #     fill_in 'session[password]', with: 'admin@admin.com'
+    #     click_on 'Log in'
+    #     click_on 'ユーザー管理画面'
+    #     click_link '削除', href: admin_user_path(@second_user)
+        # expect(page). to have_content 'ユーザーを削除しました'
     #   end
     # end
   end

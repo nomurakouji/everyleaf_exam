@@ -3,8 +3,9 @@
 <h1><%= @user.namae %>のページ</h1>
 <p>メールアドレス:<%= @user.email %></p>
 
-<%# <%= link_to "ユーザー管理画面", admin_users_path %> %>
+<%# <% if current_user.id == current_user.admin? %>
+<%= link_to "ユーザー管理画面", admin_users_path %>
+<%# <% end %>  
+<%# <%= link_to "ユーザーの作成", new_user_path %> 
 <%# <br> %>
-<%# <%= link_to "ユーザーの作成", new_user_path %> %>
-<%# <br> %>
-<%# <%= link_to "タスク一覧", tasks_path %> %>
+<%# <%= link_to "タスク一覧", tasks_path %> 
