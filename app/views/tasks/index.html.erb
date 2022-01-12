@@ -38,7 +38,7 @@
     <div class>
     <td class = check_buttons><%= link_to "確認", task_path(task.id), class: 'btn btn-primary'%></td> 
     <td class = check_buttons><%= link_to "編集", edit_task_path(task.id), class: 'btn btn-warning'%></td>
-    <td class = check_buttons><%= link_to "削除", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger'%></td>
+    <td class = check_buttons><%= button_to "削除", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger' %></td>
  </tr>
 <% end %>
 </table>
