@@ -1,0 +1,34 @@
+I, [2022-01-12T11:54:08.806367 #20221]  INFO -- : [0986413e-6041-408a-9089-836d2ce9b5db] Started GET "/" for 127.0.0.1 at 2022-01-12 11:54:08 +0900
+I, [2022-01-12T11:54:08.811887 #20221]  INFO -- : [0986413e-6041-408a-9089-836d2ce9b5db] Processing by TasksController#index as HTML
+I, [2022-01-12T11:54:08.828617 #20221]  INFO -- : [0986413e-6041-408a-9089-836d2ce9b5db] Completed 500 Internal Server Error in 16ms (Allocations: 1480)
+F, [2022-01-12T11:54:08.829434 #20221] FATAL -- : [0986413e-6041-408a-9089-836d2ce9b5db]   
+[0986413e-6041-408a-9089-836d2ce9b5db] TypeError (no implicit conversion of nil into String):
+[0986413e-6041-408a-9089-836d2ce9b5db]   
+[0986413e-6041-408a-9089-836d2ce9b5db] app/helpers/sessions_helper.rb:3:in `current_user'
+[0986413e-6041-408a-9089-836d2ce9b5db] app/controllers/application_controller.rb:6:in `login_required'
+I, [2022-01-12T11:54:09.538356 #20221]  INFO -- : [81cfba2a-9654-4bd5-9101-6baa91bea226] Started GET "/favicon.ico" for 127.0.0.1 at 2022-01-12 11:54:09 +0900
+F, [2022-01-12T11:54:09.538769 #20221] FATAL -- : [81cfba2a-9654-4bd5-9101-6baa91bea226]   
+[81cfba2a-9654-4bd5-9101-6baa91bea226] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[81cfba2a-9654-4bd5-9101-6baa91bea226]   
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] railties (6.0.3) lib/rails/engine.rb:527:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+[81cfba2a-9654-4bd5-9101-6baa91bea226] puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
