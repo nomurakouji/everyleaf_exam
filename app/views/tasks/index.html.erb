@@ -21,6 +21,7 @@
       <th style="width :5%">締切</th>
       <th style="width :5%">優先順位</th>
       <th style="width :5%">状況</th>
+      <th style="width :5%">作成者</th>
       <th style="width :5%"></th>
       <th style="width :5%"></th>
       <th style="width :5%"></th> 
@@ -33,20 +34,18 @@
     <td class = "task_deadline"><%= task.deadline %></td>
     <td><%= task.priority %></td>
     <td class = "task_condition"><%= task.condition%> </td>
+    <td><%= task.user.namae%></td>
     <div class>
     <td class = check_buttons><%= link_to "確認", task_path(task.id), class: 'btn btn-primary'%></td> 
     <td class = check_buttons><%= link_to "編集", edit_task_path(task.id), class: 'btn btn-warning'%></td>
-    <td class = check_buttons><%= link_to "削除", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger'%></td>
-    <%# <td><%= link_to "確認する", task_path(task.id) %></td>   
-    <%# <td><%= link_to "編集する", edit_task_path(task.id) %></td>  
-    <%# <td><%= link_to "削除する", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td> 
+    <td class = check_buttons><%= button_to "削除", task_path(task.id),method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger' %></td>
  </tr>
 <% end %>
 </table>
 
 <%= paginate @tasks %>
 
-<%# <%= link_to '新しくタスクを書く', new_task_path %> 
+<%# <%= link_to '新しくユーザーを登録する', new_user_path %> 
 <%# <a class="btn btn-primary" href=http://localhost:3000/tasks/new role="button">新規登録</a> %>
 
 

@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
   validates :name, presence:true
   validates :content, presence:true
+  validates :deadline, presence:true
   enum condition: { 未着手: '未着手', 着手中: '着手中', 完了: '完了' }
   scope :task_name_search, -> (name) {where("name LIKE ?", "%#{name}%")}
     # def task_name_search(query)
@@ -12,5 +13,6 @@ class Task < ApplicationRecord
     #   where(condition: query)
     # end
   enum priority: {高: 1, 中: 2, 低: 3}
+  belongs_to :user
 end
 
