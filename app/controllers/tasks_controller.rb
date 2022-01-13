@@ -10,10 +10,8 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.user_id = current_user.id
-    #追加
-    tag_list = params[:task][:name].split(',')
+    tag_list = params[:task][:label].split(',')
     if @task.save
-      #追加
       @task.save_tag(tag_list)
       redirect_to tasks_path, notice: "タスク作成しました!"
     else

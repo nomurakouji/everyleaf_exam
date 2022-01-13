@@ -141,7 +141,7 @@ RSpec.describe 'ユーザ管理機能', type: :system do
         click_on 'Log in'
         click_on 'ユーザー管理画面'
         click_link '削除', href: admin_user_path(@second_user)
-        # confirmウインドウのOKボタンを押す
+        confirmウインドウのOKボタンを押す
         page.driver.browser.switch_to.alert.accept
         expect(page). to have_content 'ユーザーを削除しました'
       end
