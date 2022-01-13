@@ -40,7 +40,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    @favorites = current_user.favorites.find_by(task.id: @task.id)
   end
 
   def edit
