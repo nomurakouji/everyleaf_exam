@@ -6,7 +6,7 @@
 <p>状態:<%= @task.condition%> </p>
 <p>タグ:
   <% @post_tags.each do |tag| %>
-    <%=tag.name%>
+    <%= link_to tag.label,search_tag_path(tag_id: tag.id)%>
   <% end %>
 </p>
 <p><%= link_to "タスク一覧に戻る", tasks_path %>

@@ -37,7 +37,7 @@
     <td class = "task_condition"><%= task.condition%> </td>
     <td><%= task.user.namae%></td>
     <td>
-      <i class="fas fa-tag"><%= task.tags.map(&:name).join(', ') %></i>
+      <i class="fas fa-tag"><%= task.tags.map(&:label).join(', ') %></i>
     </td>
     <div class>
     <td class = check_buttons><%= link_to "確認", task_path(task.id), class: 'btn btn-primary'%></td> 

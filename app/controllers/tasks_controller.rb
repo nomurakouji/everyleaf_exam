@@ -52,19 +52,24 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
-    # pluckはmapと同じ意味です！！
-    @tag_list=@task.tags.pluck(:name).join(',')
+    @tag_list=@task.tags.pluck(:label).join(',')
   end
 
   def update
     @task = Task.find(params[:id])
-    tag_list=params[:task][:name].split(',')
+    tag_list=params[:task][:label].split(',')
     if @task.update(task_params)
       @task.save_tag(tag_list)
       redirect_to tasks_path, notice: "タスクを編集しました!"
     else
       render :edit
     end
+  end
+
+  def search_tag
+    @tag_list = Tag.all
+    @tag = Tag.find(params[:tag_id])
+    @tasks = @tag.tasks.page(params[:page]).per(7)
   end
 
   def destroy

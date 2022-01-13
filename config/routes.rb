@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
   end
+  get "search_tag" => "tasks#search_tag"
 end
