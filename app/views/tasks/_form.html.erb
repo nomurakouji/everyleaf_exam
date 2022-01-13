@@ -29,7 +29,12 @@
     <%= form.label :condition%>
     <%= form.select :condition,options_for_select([['未着手'],['着手中'],['完了']])%>
   </div>
+  
 
+  <div class="field">
+    <%= form.label "タグ (,で区切ると複数タグ登録できます)" %>
+    <%= form.text_field :name,value: @tag_list,class:"form-control"%>
+  </div>
 
   <%= form.submit %>
   

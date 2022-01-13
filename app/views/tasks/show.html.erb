@@ -4,4 +4,9 @@
 <p>期限:<%= @task.deadline %></p>
 <p>優先順位:<%= @task.priority %></p>
 <p>状態:<%= @task.condition%> </p>
+<p>タグ:
+  <% @post_tags.each do |tag| %>
+    <%=tag.name%>
+  <% end %>
+</p>
 <p><%= link_to "タスク一覧に戻る", tasks_path %>
