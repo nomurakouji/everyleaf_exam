@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :labels
   get 'sessions/new'
   root 'tasks#index'
   resources :tasks 
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
   end
+  resources :favorites
 end

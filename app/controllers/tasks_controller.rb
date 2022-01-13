@@ -40,6 +40,7 @@ class TasksController < ApplicationController
   end
 
   def show
+    @favorites = current_user.favorites.find_by(task.id: @task.id)
   end
 
   def edit
@@ -60,7 +61,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :content, :deadline, :condition, :priority)
+    params.require(:task).permit(:name, :content, :deadline, :condition, :priority, { label_ids: [] })
   end
 
   def set_task
