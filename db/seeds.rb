@@ -20,6 +20,7 @@ User.create!(
                )
 end
 
+
 10.times do |n|
     name = Faker::Name.name 
     content = Faker::Currency.name
